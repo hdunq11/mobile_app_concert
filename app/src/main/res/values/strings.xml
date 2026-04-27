@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Concert_App</string>
+    <string name="home">Home</string>
+    <string name="ticket">Ticket</string>
+    <string name="event">Event</string>
+    <string name="near_me">Near Me</string>
+    <string name="profile">Profile</string>
+</resources>
