@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.dungh.concert.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_concert_detail"
+            app:destination="@id/concert_detail_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/concert_detail_fragment"
+        android:name="com.dungh.concert.ui.concert_detail.ConcertDetailFragment"
+        android:label="@string/unknown_event"
+        tools:layout="@layout/fragment_concert_detail">
+        <argument
+            android:name="concertId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_concert_detail_to_seat_selection"
+            app:destination="@id/seat_selection_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seat_selection_fragment"
+        android:name="com.dungh.concert.ui.seat_selection.SeatSelectionFragment"
+        android:label="Chọn ghế"
+        tools:layout="@layout/fragment_seat_selection">
+        <argument
+            android:name="concertId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_seat_selection_to_checkout"
+            app:destination="@id/checkout_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkout_fragment"
+        android:name="com.dungh.concert.ui.checkout.CheckoutFragment"
+        android:label="Thanh toán"
+        tools:layout="@layout/fragment_checkout">
+        <argument
+            android:name="concertId"
+            app:argType="string" />
+        <argument
+            android:name="seatIds"
+            app:argType="string[]" />
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="reservedUntil"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_checkout_to_confirmation"
+            app:destination="@id/confirmation_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmation_fragment"
+        android:name="com.dungh.concert.ui.confirmation.ConfirmationFragment"
+        android:label="Xác nhận"
+        tools:layout="@layout/fragment_confirmation">
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_confirmation_to_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_confirmation_to_my_tickets"
+            app:destination="@id/navigation_dashboard"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.dungh.concert.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.dungh.concert.ui.favorites.FavoritesFragment"
+        android:label="Yêu thích"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favorites_to_concert_detail"
+            app:destination="@id/concert_detail_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.dungh.concert.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+</navigation>

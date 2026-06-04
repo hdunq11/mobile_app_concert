@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Ticket Booking App — Figma-style palette -->
+    <color name="bg_screen">#F4F6FC</color>
+    <color name="bg_surface">#FFFFFF</color>
+    <color name="bg_surface_alt">#EEF0F8</color>
+    <color name="primary">#5B4DFF</color>
+    <color name="primary_dark">#4338CA</color>
+    <color name="primary_light">#E8E6FF</color>
+    <color name="accent">#FF7A50</color>
+    <color name="accent_light">#FFE8E0</color>
+    <color name="success">#22C55E</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="text_primary">#1B1B2F</color>
+    <color name="text_secondary">#6E7191</color>
+    <color name="text_muted">#9CA3C7</color>
+    <color name="divider">#E2E5F0</color>
+    <color name="shadow">#1A5B4DFF</color>
+
+    <!-- Legacy aliases (giữ tương thích code cũ) -->
+    <color name="bg_dark">@color/bg_screen</color>
+    <color name="bg_card">@color/bg_surface</color>
+    <color name="neon_purple">@color/primary</color>
+    <color name="neon_pink">@color/accent</color>
+    <color name="neon_cyan">@color/primary</color>
+    <color name="gold">#F59E0B</color>
+    <color name="glass_border">@color/divider</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="purple_200">#E8E6FF</color>
+    <color name="purple_500">@color/primary</color>
+    <color name="purple_700">@color/primary_dark</color>
+    <color name="teal_200">@color/primary_light</color>
+    <color name="teal_700">@color/primary_dark</color>
 </resources>

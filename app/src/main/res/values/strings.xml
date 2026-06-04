@@ -1,8 +1,19 @@
 <resources>
-    <string name="app_name">Concert_App</string>
+    <string name="app_name">ConcertGo</string>
     <string name="home">Home</string>
     <string name="ticket">Ticket</string>
     <string name="event">Event</string>
     <string name="near_me">Near Me</string>
     <string name="profile">Profile</string>
+    <string name="title_home">Sự kiện</string>
+    <string name="title_dashboard">Vé của tôi</string>
+    <string name="title_notifications">Hồ sơ</string>
+    <string name="unknown_event">Sự kiện</string>
+    <string name="unknown_venue">Địa điểm chưa có</string>
+    <string name="date_unknown">Ngày chưa có</string>
+    <string name="no_artist_info">Nghệ sĩ chưa rõ</string>
+    <string name="concert_banner">Banner sự kiện</string>
+    <string name="venue">Địa điểm</string>
+    <string name="date_time">Ngày giờ</string>
+    <string name="add_favorite">Thêm vào yêu thích</string>
 </resources>
